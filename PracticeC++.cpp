@@ -24,8 +24,8 @@ void FCFS(Process proc[], int n) {
     findTurnaroundTime(proc, n);
 
     cout << "Process\tBurst Time\tArrival Time\tWaiting Time\tTurnaround Time\n";
-    for (int i = 0; i < n; i++) {
-        cout << proc[i].id << "\t" << proc[i].burstTime << "\t\t" << proc[i].arrivalTime << "\t\t"
+    for (int i = 0; i < n; i++) 
+{        cout << proc[i].id << "\t" << proc[i].burstTime << "\t\t" << proc[i].arrivalTime << "\t\t"
              << proc[i].waitingTime << "\t\t" << proc[i].turnaroundTime << endl;
     }
 }

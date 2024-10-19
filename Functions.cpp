@@ -1,14 +1,27 @@
 #include <iostream>
 using namespace std;
-
-
-
-int main(){
+int main()
+{
 	int a, b;
 	cin >> a >> b;
+	bool no_lucky = true;
+	for(int i = a; i <= b; i++){
+		bool lucky = true;
+		while(i>0){
+			int x = i%10;
+			i/=10;
+			if(x!=4 || x!=7){
+				lucky = false;
+				break;
+			}
+		}
+		if(lucky == true){
+			no_lucky = false;
+			cout << i << " ";
+		}
+	}
+	if(no_lucky == true)
+		cout << "-1" << endl;
 
-	int ans = 1;
-	for (int i = 1; i <= b; i++)
-		ans*=a;
-	cout << ans << endl;
+	return 0;
 }
