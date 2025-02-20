@@ -9,19 +9,11 @@ using namespace std;
 
 
 void solution(){
-    int n;
-    cin >> n;
-    int m = n-2;
-    vector <int> v(m);
-    vin(v);
-    bool flag = true;
-    for(int i = 0; i < m-2; i++){
-        if(v[i] == 1 && v[i+1] == 0 && v[i+2] == 1){
-            flag = false;
-            break;
-        }
-    }
-    flag ? yes : no;
+    int a, b, c;
+    cin >> a >> b >> c;
+    if(a == b && b == c)
+        yes;
+    else no;
 }
 
 
@@ -31,7 +23,7 @@ int main()
     cin.tie(0);
     cout.tie(0);
     int t=1;
-    cin >> t;
+    // cin >> t;
     while(t--){
         solution();
     }
