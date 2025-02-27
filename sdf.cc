@@ -9,11 +9,9 @@ using namespace std;
 
 
 void solution(){
-    int a, b, c;
-    cin >> a >> b >> c;
-    if(a == b && b == c)
-        yes;
-    else no;
+    int a = 0;
+    int b = 5;
+    cout << a%b << endl;
 }
 
 
