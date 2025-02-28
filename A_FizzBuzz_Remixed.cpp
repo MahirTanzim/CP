@@ -20,10 +20,6 @@ void solution(){
     if(n%3 == n%5 && n%3 == 0) cnt = 3*x/15 + 1;
     else if(n%3 == n%5 && n%3 == 1) cnt = 3*x/15 + 2;
     else  cnt = 3*x/15 + 3;
-
-    
-
-        
     cout << cnt << endl;
 }
 
