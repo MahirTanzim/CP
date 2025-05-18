@@ -1,2 +1,8 @@
-/.vscode
-/.cph
+# Ignore everything
+*
+
+# But not these files:
+!*.c
+!*.cpp
+!*.cc
+!*.py
