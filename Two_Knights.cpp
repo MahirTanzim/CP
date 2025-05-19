@@ -7,7 +7,10 @@ using namespace std;
 
 
 void solution(){
-    ;
+    ll n; cin >> n;
+    for(ll k = 1; k <= n; k++){
+        cout << (k*k*(k*k-1)/2)-4*(k-1)*(k-2)<< endl;
+    }
 }
 
 
@@ -17,7 +20,7 @@ int main()
     cin.tie(0);
     cout.tie(0);
     int t=1;
-    cin >> t;
+    // cin >> t;
     while(t--){
         solution();
     }
