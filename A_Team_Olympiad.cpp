@@ -8,22 +8,23 @@ using namespace std;
 
 void solution(){
     int n; cin >> n;
-    vector <int> v(n);
-    for(int &i : v) cin >> i;
-    int cnt1 = count(v.begin(), v.end(), 1);
-    int cnt2 = count(v.begin(), v.end(), 2);
-    int cnt3 = count(v.begin(), v.end(), 3);
-    int tmcnt = min({cnt1, cnt2, cnt3});
-    vector<vector<int>> vv;
-    for(int i = 0; i < 3; i++){
-        for(int j = 0; j < n; j++){
-            if(v[j]-1 == i) vv[i].push_back(j+1);
-            
-        }
-            
-        
-        
+    vector <int> prg, math, pe;
+    int x;
+    for(int i = 0; i < n; i++){
+        cin >> x;
+        if(x == 1) prg.push_back(i+1);
+        else if(x == 2) math.push_back(i+1);
+        else pe.push_back(i+1);
     }
+    int tmcnt = min({prg.size(), math.size(), pe.size()});
+    if(tmcnt == 0){
+        cout << tmcnt << endl;
+        return;
+    }
+    cout << tmcnt << endl;
+    for(int i = 0; i < tmcnt; i++)
+        cout << prg[i] << " " << math[i] << " " << pe[i] << endl;
+
     
 }
 
