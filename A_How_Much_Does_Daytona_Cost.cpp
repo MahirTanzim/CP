@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define bijli() (ios_base:: sync_with_stdio(false),cin.tie(NULL), cout.tie(NULL));
 #define endl "\n"
 #define ll long long int
 #define all(x) x.begin(),x.end()
@@ -7,25 +8,19 @@ using namespace std;
 
 
 void solution(){
-    int n; cin >> n;
-    
-    int sum = 0;
-    int lvl = 0;
-    while(sum<=n){
-        lvl++;
-        sum+=(lvl*(lvl+1)/2);
-    }
-    cout << lvl-1 << endl;
+    int n, k; cin >> n >> k;
+    vector <int> v(n);
+    vin(v);
+    count(all(v), k) ? cout << "YES" endl : cout << "NO" << endl;
+        
 }
 
 
 int main()
 {
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    cout.tie(0);
+    bijli();
     int tc=1;
-    // cin >> tc;
+    cin >> tc;
     while(tc--){
         solution();
     }

@@ -9,19 +9,11 @@ using namespace std;
 void solution(){
     int n; cin >> n;
     vector <int> v(n);
-    for(int &i : v) cin >> i;
-    int longest_space = 0;
-    for(int i = 0; i < n; i++){
-        int space = 0;
-        if(v[i]==0){
-            for(int j = i; v[j]==0 && j < n; j++){
-                space++;
-            }
-            i+=(space-1);
-        }
-        if(space > longest_space) longest_space = space;
-    }
-    cout << longest_space << endl;
+    for (int &i : v) cin >> i;
+    sort(all(v));
+    v[0]+=1;
+    int prod = accumulate(all(v), 1, multiplies<int>());
+    cout << prod << endl;
 }
 
 

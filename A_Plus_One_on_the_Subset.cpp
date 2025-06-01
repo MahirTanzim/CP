@@ -8,14 +8,10 @@ using namespace std;
 
 void solution(){
     int n; cin >> n;
-    
-    int sum = 0;
-    int lvl = 0;
-    while(sum<=n){
-        lvl++;
-        sum+=(lvl*(lvl+1)/2);
-    }
-    cout << lvl-1 << endl;
+    vector <ll> v(n);
+    for(ll &i : v) cin >> i;
+    sort(v.begin(), v.end());
+    cout << v[n-1]-v[0] << endl;
 }
 
 
@@ -25,7 +21,7 @@ int main()
     cin.tie(0);
     cout.tie(0);
     int tc=1;
-    // cin >> tc;
+    cin >> tc;
     while(tc--){
         solution();
     }

@@ -8,20 +8,17 @@ using namespace std;
 
 void solution(){
     int n; cin >> n;
-    vector <int> v(n);
-    for(int &i : v) cin >> i;
-    int longest_space = 0;
-    for(int i = 0; i < n; i++){
-        int space = 0;
-        if(v[i]==0){
-            for(int j = i; v[j]==0 && j < n; j++){
-                space++;
-            }
-            i+=(space-1);
+    string s; cin >> s;
+    vector <bool> v(26, false);
+    for(int i = 1; i < n; i++){
+        if(v[s[i] - 'A']){
+            cout << "NO" << endl;
+            return;
         }
-        if(space > longest_space) longest_space = space;
+        if(s[i] != s[i-1])
+            v[s[i-1]-'A'] = true;
     }
-    cout << longest_space << endl;
+    cout << "YES" << endl;
 }
 
 
