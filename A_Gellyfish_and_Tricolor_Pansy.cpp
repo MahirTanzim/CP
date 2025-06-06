@@ -7,10 +7,9 @@ using namespace std;
 
 
 void solution(){
-    int n, k; cin >> n >> k;
-    vector <ll> v(n);
-    for(ll &i : v) cin >> i;
-    cout << (k==1 && !is_sorted(all(v)) ? "NO" : "YES") << endl;
+    ll a, b, c, d;
+    cin >> a >> b >> c >> d;
+    cout << (min(a,c) >= min(b,d) ? "Gellyfish" : "Flower") << endl;
 }
 
 

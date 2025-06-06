@@ -7,10 +7,18 @@ using namespace std;
 
 
 void solution(){
-    int n, k; cin >> n >> k;
-    vector <ll> v(n);
-    for(ll &i : v) cin >> i;
-    cout << (k==1 && !is_sorted(all(v)) ? "NO" : "YES") << endl;
+    ll a, b, c, n;
+    cin >> a >> b >> c >> n;
+    bool flag = true;
+    if((a+b+c+n)%3!=0) flag = false;
+    else{
+        ll x = (a+b+c+n)/3;
+        if(x<a || x<b || x<c)
+        flag = false;
+    }
+    cout << (flag?"YES":"NO") << endl;
+
+
 }
 
 

@@ -7,10 +7,17 @@ using namespace std;
 
 
 void solution(){
-    int n, k; cin >> n >> k;
-    vector <ll> v(n);
-    for(ll &i : v) cin >> i;
-    cout << (k==1 && !is_sorted(all(v)) ? "NO" : "YES") << endl;
+    int n; cin >> n;
+    string s, ss;
+    cin >> s >> ss;
+    for(char &c : s)
+        if(c=='G') c = 'B';
+    for(char &c : ss)
+        if(c=='G') c = 'B';
+    
+    cout << (s==ss?"YES":"NO") << endl;
+    
+    
 }
 
 

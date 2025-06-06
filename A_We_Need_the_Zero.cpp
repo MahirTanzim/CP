@@ -7,10 +7,20 @@ using namespace std;
 
 
 void solution(){
-    int n, k; cin >> n >> k;
-    vector <ll> v(n);
-    for(ll &i : v) cin >> i;
-    cout << (k==1 && !is_sorted(all(v)) ? "NO" : "YES") << endl;
+    int n; cin >> n;
+    vector <int> v(n);
+    for(auto &it : v) cin >> it;
+    int x0r =  0, ans;
+    for(int i : v) x0r = x0r^i;
+    if(n%2==0)
+        if(x0r == 0) ans = 0;
+        else ans = -1;
+    else
+        if(x0r == 0) ans = 0;
+        else ans = x0r;
+
+    cout << ans << endl;
+    
 }
 
 

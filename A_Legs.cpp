@@ -7,10 +7,8 @@ using namespace std;
 
 
 void solution(){
-    int n, k; cin >> n >> k;
-    vector <ll> v(n);
-    for(ll &i : v) cin >> i;
-    cout << (k==1 && !is_sorted(all(v)) ? "NO" : "YES") << endl;
+    int n; cin >> n;
+    cout << (n%4==0? n/4 : n/4+1) << endl;
 }
 
 

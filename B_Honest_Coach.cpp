@@ -7,10 +7,16 @@ using namespace std;
 
 
 void solution(){
-    int n, k; cin >> n >> k;
-    vector <ll> v(n);
-    for(ll &i : v) cin >> i;
-    cout << (k==1 && !is_sorted(all(v)) ? "NO" : "YES") << endl;
+    int n; cin >> n;
+    vector <int> v(n), diff;
+    for(int &i : v) cin >> i;
+    sort(all(v), greater<int>());
+    for(int i = 0; i < n-1; i++){
+        diff.push_back(v[i]-v[i+1]);
+    }
+
+    cout << *min_element(all(diff)) << endl;
+
 }
 
 
