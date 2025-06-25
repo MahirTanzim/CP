@@ -7,10 +7,14 @@ using namespace std;
 
 
 void solution(){
-    int a, b, c;
-    cin >> a >> b >> c;
-  
-    cout << ((c%2==0 && a>b) || (c%2!=0 && a>=b) ? "First" : "Second") << endl;
+    int n, a, b;
+    cin >> n >> a >> b;
+    
+    int amount;
+    if(2*a > b)
+        n%2==0 ? amount = b*n/2 : amount = b*(n-1)/2+a;
+    else amount = a*n;
+    cout << amount << endl;
 }
 
 

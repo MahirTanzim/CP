@@ -7,10 +7,10 @@ using namespace std;
 
 
 void solution(){
-    int a, b, c;
-    cin >> a >> b >> c;
-  
-    cout << ((c%2==0 && a>b) || (c%2!=0 && a>=b) ? "First" : "Second") << endl;
+    int a, x, y;
+    cin >> a >> x >> y;
+    if(x>y) swap(x,y);
+    cout << (a>x && a<y ? "NO" : "YES") << endl;
 }
 
 
