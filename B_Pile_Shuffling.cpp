@@ -22,11 +22,19 @@ void solution(){
         if(v[i][0]>v[i][2] && (v[i][2]-v[i][0])<=c1) {
             c1-=(v[i][2]-v[i][0]);
             ans+=(v[i][2]-v[i][0]);
+            v[i][0]-=(v[i][2]-v[i][0]);
         }
         else if(v[i][0]>v[i][2] && (v[i][2]-v[i][0])>c1) {
             ans+=c1;
+            v[i][0]-=(v[i][0]-c1);
         }
     }
+    for(int i = 0; i < n; i++){
+        if(v[i][1]>v[i][3] &&v[i][0]!=1) {
+            ans+=v[i][0];
+        }
+    }
+
     cout << ans+c2 << endl;
     
     
