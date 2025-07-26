@@ -10,32 +10,18 @@ void solution(){
     ll n; cin >> n;
     ll a, b, c, d;
     ll ans = 0;
-    int c1=0, c2=0;
-    vector <ll> v[n];
     for(int i = 0; i < n; i++){
         cin >> a >> b >> c >> d;
-        v[i] = {a, b, c, d};
-        if(c>a)c1+=(c-a);
-        if(d>b) c2+=(d-b);
-    }
-    for(int i = 0; i < n; i++){
-        if(v[i][0]>v[i][2] && (v[i][2]-v[i][0])<=c1) {
-            c1-=(v[i][2]-v[i][0]);
-            ans+=(v[i][2]-v[i][0]);
-            v[i][0]-=(v[i][2]-v[i][0]);
+        if(a>c){
+            ans+=(a-c);
+            a-=(a-c);
         }
-        else if(v[i][0]>v[i][2] && (v[i][2]-v[i][0])>c1) {
-            ans+=c1;
-            v[i][0]-=(v[i][0]-c1);
-        }
+        if(b>d && a == 0)
+            ans+=(b-d);
+        else if(b>d && a!=0)
+            ans+=(b-d+a);
     }
-    for(int i = 0; i < n; i++){
-        if(v[i][1]>v[i][3] &&v[i][0]!=1) {
-            ans+=v[i][0];
-        }
-    }
-
-    cout << ans+c2 << endl;
+    cout << ans << endl;
     
     
     
