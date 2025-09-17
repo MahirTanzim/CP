@@ -32,6 +32,7 @@ void printMatrix(int n) {
             cout << matrix[i][j] << " ";
         }
         cout << endl;
+        cout << endl;
     }
 }
 
