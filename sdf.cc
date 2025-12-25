@@ -7,6 +7,10 @@ void solution(){
     for(int i = 0; i < 5; i++){
         cout << i+1 << endl;
     }
+    for(int i = 0; i <  5;  i++){
+        int a = 100 ;
+        
+    }
 }
 
 
