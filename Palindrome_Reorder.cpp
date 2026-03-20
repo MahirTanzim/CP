@@ -29,7 +29,6 @@ void solution(){
             ans[n/2] = m.first;
             m.second-=1;
         }
-            
     int l = 0, r = n-1;
     for(auto &m : mp){
         while(m.second >0){
@@ -39,7 +38,6 @@ void solution(){
         }
     }
     cout << ans << endl;
-
 }
 
 
