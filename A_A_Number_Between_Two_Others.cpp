@@ -6,12 +6,10 @@ using namespace std;
 #define all(x) x.begin(),x.end()
 
 
-void solution(){
-    int n; cin >> n;
-    string s = "aaa";
-    if(n <=28) s[2]+=(n-3);
-    else if(n <= )
 
+void solution(){
+    ll x, y; cin >> x >> y;
+    cout << (y/x > 2 ? "YES" : "NO") << endl;
 }
 
 
