@@ -38,7 +38,8 @@ int main()
     for(int i = 0; i <= n; i++)
         for(int j = 0; j <= mx_weight; j++)
         	dp[i][j] = -1;
-
+  // khjdhfgiuw iouhediuqwhe iuhqwedriouwqh
+//   jeuhdiqwue
     cout << knapsack(n-1, mx_weight) << endl;
     return 0;
 }
